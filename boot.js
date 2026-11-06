@@ -12,7 +12,7 @@
     offline.textContent='Downloading offline words and sounds…';
     let currentRegistration,applying=false;
     navigator.serviceWorker.addEventListener('controllerchange',()=>{if(applying)location.reload();});
-    navigator.serviceWorker.addEventListener('message',event=>{if(event.data?.type==='garden-offline-ready'&&event.data.version==='github-world-fresh-start-1'&&!currentRegistration?.waiting)offline.textContent='Offline words, music and drawing tools ready ✓';});
+    navigator.serviceWorker.addEventListener('message',event=>{if(event.data?.type==='garden-offline-ready'&&event.data.version==='github-world-fresh-start-2'&&!currentRegistration?.waiting)offline.textContent='Offline words, music and drawing tools ready ✓';});
     navigator.serviceWorker.register('sw.js').then(registration=>{
       currentRegistration=registration;
       const inspect=()=>{
