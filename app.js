@@ -3,7 +3,7 @@ const main=$('#main');
 const storageKey='reigns-garden-v1';
 let state=Garden.fresh(),storageAvailable=true,loadMessage='';
 if(GardenStorage.initial&&Garden.validate(GardenStorage.initial))state=GardenStorage.initial;
-state=Learning.migrate(state);state=PetSanctuary.migrate(state);PetShop.migrate(state);if(!state.testCredit200Added){state.coins+=200;state.testCredit200Added=true;}
+state=Learning.migrate(state);state=PetSanctuary.migrate(state);PetShop.migrate(state);if(state.testCredit200Added){state.coins=Math.max(0,state.coins-200);delete state.testCredit200Added;}
 loadMessage=GardenStorage.message;storageAvailable=GardenStorage.mode!=='unavailable';
 let page='home',session=null,parentUnlocked=false,gateAnswer=0,toastTimer,canvas,context,paths=[],activePath=null,ink=state.artTools?.ink||'#487d4a',brush=state.artTools?.brush||8,erasing=state.artTools?.erasing||false;
 const today=()=>{const date=new Date();return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;};
