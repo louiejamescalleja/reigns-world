@@ -1,12 +1,12 @@
 (function(root){
-  const key='reigns-garden-v1';
+  const key='reigns-world-v1';
   const api={initial:null,mode:'unavailable',message:'',ready:null};
   let database=null,queue=Promise.resolve(),canWrite=true;
   function write(snapshot){return new Promise((resolve,reject)=>{const transaction=database.transaction('progress','readwrite'),store=transaction.objectStore('progress'),request=store.get('current');request.onsuccess=()=>{if((request.result?.shopRevision||0)>(snapshot.shopRevision||0)){transaction.abort();return;}store.put(snapshot,'current');};transaction.oncomplete=()=>resolve();transaction.onerror=()=>reject(transaction.error);transaction.onabort=()=>reject(transaction.error||new Error('Save interrupted'));});}
   function legacy(){let raw;try{raw=root.localStorage.getItem(key);}catch{return null;}if(!raw)return null;try{return JSON.parse(raw);}catch{return {invalidSavedData:true};}}
   api.ready=(async()=>{
     try{
-      database=await new Promise((resolve,reject)=>{const request=root.indexedDB.open('reigns-garden',1);request.onupgradeneeded=()=>request.result.createObjectStore('progress');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);request.onblocked=()=>reject(new Error('Storage is open in an older tab'));});
+      database=await new Promise((resolve,reject)=>{const request=root.indexedDB.open('reigns-world',1);request.onupgradeneeded=()=>request.result.createObjectStore('progress');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);request.onblocked=()=>reject(new Error('Storage is open in an older tab'));});
       database.onversionchange=()=>database.close();
       const current=await new Promise((resolve,reject)=>{const transaction=database.transaction('progress','readonly');const request=transaction.objectStore('progress').get('current');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});
       const value=current===undefined?legacy():current;
