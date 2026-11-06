@@ -1,0 +1,5 @@
+.pond-fish{position:absolute;transform:translate(-50%,-50%);padding:0;border:0;background:none;box-shadow:none;z-index:800;touch-action:none;cursor:grab}.pond-fish img{display:block;width:100%;animation:fish-swim 1.3s ease-in-out infinite;filter:drop-shadow(0 3px 2px #17495a44)}.pond-fish span{display:inline-block;background:#fff5d8;border-radius:12px;padding:3px 10px;font-family:var(--font-body)}.pond-fish.eating img{animation:fish-eat .65s ease-in-out infinite}.pond-fish-food{position:absolute;width:40px;height:40px;z-index:850;pointer-events:none}.fish-portrait{display:block;width:150px;margin:20px auto}@keyframes fish-swim{0%,100%{transform:rotate(-4deg) scaleX(.98)}50%{transform:rotate(4deg) scaleX(1.03)}}@keyframes fish-eat{0%,100%{transform:rotate(0)}50%{transform:rotate(15deg) translateY(6px)}}@media(prefers-reduced-motion:reduce){.pond-fish img{animation:none}}
+
+.pond-fish img{scale:var(--fish-facing,1) 1}
+
+.pond-food-flake{position:absolute;width:5px;height:4px;border-radius:40%;background:#d69b54;border:1px solid #9c692f;z-index:850;pointer-events:none;box-shadow:0 1px 1px #fff5}

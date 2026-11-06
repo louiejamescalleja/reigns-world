@@ -1,0 +1,12 @@
+.pawprint-coin{display:inline-block;width:26px;height:26px;object-fit:contain;vertical-align:middle;flex:0 0 26px}
+.balance{display:inline-flex;align-items:center;justify-content:center;gap:7px;line-height:1;white-space:nowrap}
+.balance b{line-height:1}
+.cover-button{display:flex;align-items:center;justify-content:center;gap:12px;padding-left:58px;padding-right:58px}
+.cover-button>span{display:flex;align-items:center;justify-content:center;width:32px;height:32px;line-height:1;left:17px}
+.audio-volume-content{display:flex;flex-direction:column;gap:10px;max-height:70vh;overflow:auto;z-index:100}
+.audio-volume-content button{min-height:44px;width:100%;padding:8px}
+.audio-volume-panel summary:focus-visible,.audio-volume-content button:focus-visible{outline:3px solid #783aa5;outline-offset:3px}
+.game-update-notice{font-size:12px}.game-update-notice summary{min-height:44px;padding:8px;background:#fff2cc}
+.game-update-notice #offline-status{display:block;line-height:1.5;padding:8px 0}
+footer{margin-top:22px;padding-top:12px;padding-bottom:12px}
+.game-top>span:last-child{display:inline-flex;align-items:center;gap:5px}

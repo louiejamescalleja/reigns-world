@@ -1,2 +1,15 @@
 @media(pointer:coarse){.swatch{width:44px;height:44px}.icon-button{min-width:44px;min-height:44px}.parent-link{min-height:44px}.tools .secondary{min-height:44px}button{touch-action:manipulation}}
 @media(min-width:700px) and (orientation:landscape) and (max-height:850px){.storybook-cover{min-height:540px}.cover-ui{padding:20px 18px 75px}.game-logo{margin:12px 0}.game-logo span{font-size:68px}.cover-tagline{margin:12px 0}.cover-menu{gap:10px}.cover-button{min-height:48px;padding-top:6px;padding-bottom:6px;font-size:22px}.cover-greeting{margin-top:14px}.cover-progress{bottom:12px}.game-panel{min-height:490px}.picture{height:105px;width:125px;font-size:76px}.word{margin:16px 0}.page-heading{margin-bottom:18px}}
+
+/* Keep activity headings and controls compact. */
+#main > .page-heading {
+  min-height: 0;
+  padding: 0;
+  margin: 0 0 12px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+#main > .page-heading h1 { font-size: clamp(20px, 2vw, 25px); }
+#main > .page-heading .eyebrow,
+#main > .page-heading p { display: none; }

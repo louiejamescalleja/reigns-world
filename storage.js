@@ -2,7 +2,7 @@
   const key='reigns-garden-v1';
   const api={initial:null,mode:'unavailable',message:'',ready:null};
   let database=null,queue=Promise.resolve(),canWrite=true;
-  function write(snapshot){return new Promise((resolve,reject)=>{const transaction=database.transaction('progress','readwrite');transaction.objectStore('progress').put(snapshot,'current');transaction.oncomplete=()=>resolve();transaction.onerror=()=>reject(transaction.error);transaction.onabort=()=>reject(transaction.error||new Error('Save interrupted'));});}
+  function write(snapshot){return new Promise((resolve,reject)=>{const transaction=database.transaction('progress','readwrite'),store=transaction.objectStore('progress'),request=store.get('current');request.onsuccess=()=>{if((request.result?.shopRevision||0)>(snapshot.shopRevision||0)){transaction.abort();return;}store.put(snapshot,'current');};transaction.oncomplete=()=>resolve();transaction.onerror=()=>reject(transaction.error);transaction.onabort=()=>reject(transaction.error||new Error('Save interrupted'));});}
   function legacy(){let raw;try{raw=root.localStorage.getItem(key);}catch{return null;}if(!raw)return null;try{return JSON.parse(raw);}catch{return {invalidSavedData:true};}}
   api.ready=(async()=>{
     try{
@@ -28,6 +28,13 @@
       if(database)await write(snapshot);else if(api.mode==='localStorage')root.localStorage.setItem(key,JSON.stringify(snapshot));else throw new Error('Storage unavailable');
     }).then(()=>done(true)).catch(()=>done(false));
     return queue;
+  };
+  api.shopPurchase=async(value,id)=>{
+    await queue;
+    if(!canWrite)throw new Error('Saving unavailable');
+    if(database)return new Promise((resolve,reject)=>{const transaction=database.transaction('progress','readwrite'),store=transaction.objectStore('progress'),request=store.get('current');let result;request.onsuccess=()=>{const current=request.result||JSON.parse(JSON.stringify(value));if(!root.Garden.validate(current)){transaction.abort();return;}const error=root.PetShop.purchase(current,id);result={value:current,error};if(!error)store.put(current,'current');};transaction.oncomplete=()=>resolve(result);transaction.onerror=transaction.onabort=()=>reject(new Error('Purchase could not save'));});
+    const update=()=>{const current=legacy()||JSON.parse(JSON.stringify(value));if(!root.Garden.validate(current))throw new Error('Invalid save');const error=root.PetShop.purchase(current,id);if(!error)root.localStorage.setItem(key,JSON.stringify(current));return {value:current,error};};
+    return root.navigator?.locks?root.navigator.locks.request('reigns-shop',update):update();
   };
   api.flush=()=>queue;
   root.GardenStorage=api;

@@ -1,0 +1,13 @@
+.pet-shop-scene{padding-top:24px}
+.sanctuary-editor.care-mode .sanctuary-swatches,.sanctuary-editor.care-mode .sanctuary-tools,.sanctuary-editor.care-mode .sanctuary-save-paint,.sanctuary-editor.care-mode .sanctuary-editor-note{display:none}
+.sanctuary-editor.care-mode .sanctuary-paint-canvas{pointer-events:none}
+.sanctuary-editor:not(.care-mode) .sanctuary-feeding{display:none}
+.sanctuary-editor .sanctuary-feeding{margin-top:8px;padding:10px;border:0;box-shadow:none;background:none}
+.sanctuary-editor .sanctuary-feeding h2{font-size:20px}
+.sanctuary-editor .sanctuary-feeding label{display:none}
+.sanctuary-editor .feed-foods{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sanctuary-editor .feed-foods button{font-size:13px;padding:6px;display:flex;flex-direction:column;min-width:0}
+.sanctuary-meal{position:absolute;width:60px;height:60px;object-fit:contain;z-index:950;pointer-events:none}
+@media(max-width:700px){.pet-shop-scene{padding-top:14px}}
+
+.sanctuary-ball{position:absolute;width:40px;height:40px;object-fit:contain;z-index:950;pointer-events:none;transform-origin:center}.pet-shop-scene .price{display:flex;align-items:center;justify-content:center;gap:4px}.pet-shop-scene .price .pawprint-coin{width:22px;height:22px;flex-basis:22px}.sanctuary-feeding>[data-play-ball]{display:flex;align-items:center;gap:8px;margin-top:12px;min-height:48px}

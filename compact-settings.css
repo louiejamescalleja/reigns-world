@@ -1,0 +1,19 @@
+#main .cover-menu{width:max-content;max-width:100%;gap:10px}
+#main .cover-button{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;padding:9px 18px;min-width:270px;font-size:22px}
+#main .cover-button>span{position:static;transform:none;width:28px;height:28px;font-size:25px}
+.settings-volume-title{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.audio-volume-content .speaker-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;min-width:44px;min-height:44px;padding:5px;border:1px solid #c69a61;border-radius:12px;background:#fff3ce;font-size:22px;box-shadow:none}
+.settings-volume{margin:4px 0}.audio-volume-content .parent-link{display:block;width:100%;font-size:14px}
+@media(max-width:900px){
+ #main .storybook-cover{background-size:auto 85%;background-position:left bottom;background-color:#bfeafa;min-height:530px}
+ #main .cover-ui{width:51%;margin:0 1% 0 auto;padding:18px 6px 95px}
+ #main .game-logo img{max-height:125px}
+ #main .cover-menu{width:100%}
+ #main .cover-button{min-width:0;width:100%;padding:9px 8px;grid-template-columns:23px minmax(0,1fr);font-size:clamp(13px,2.5vw,20px);min-height:48px;gap:5px}
+ #main .cover-button>span{width:23px;font-size:22px}
+ #main .cover-tagline{font-size:clamp(10px,1.8vw,15px);margin:10px 0}
+ #main .cover-kicker{font-size:9px;letter-spacing:1px}
+ #main .cover-greeting{font-size:11px;margin-top:14px;padding:7px}
+ #main .cover-progress{font-size:11px;left:10px;right:10px;max-width:calc(100% - 20px)}
+}
+@media(max-width:480px){#main .storybook-cover{background-size:auto 65%}}

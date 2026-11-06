@@ -1,0 +1,101 @@
+
+main .paint-layout{display:grid;grid-template-columns:228px minmax(0,1fr);gap:12px;align-items:start}
+main .paint-tools-panel{padding:8px;background:linear-gradient(135deg,#fffdf0e8,#fff0cfe4)}
+main .paint-tools{background:#ead09b;border-radius:15px;padding:9px;max-height:720px}
+main .paint-tools h2{font-size:18px;margin:6px 0}
+main .paint-tools h3{font-size:14px;margin:9px 0 4px}
+main .paint-tools .paint-palette{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+main .paint-tools .paint-palette .swatch{width:43px;min-width:0;max-width:100%;height:43px;min-height:43px}
+main .paint-brushes{gap:5px}
+main .paint-brushes button{min-height:43px;padding:6px 2px;font-size:12px}
+main .paint-size-label{margin-top:9px;font-size:12px}
+main .paint-history{gap:5px;margin-bottom:3px}
+main .paint-history button{font-size:12px;padding:6px;min-height:43px}
+main .custom-paint{margin-top:9px;font-size:12px}
+main .paint-workspace{background:none;border:none;box-shadow:none;padding:0;min-width:0}
+main .paint-canvas-shell{padding:0;background:none;border:0;border-radius:0;box-shadow:none;backdrop-filter:none}
+main .paint-workspace canvas{background:#fffef8;border:3px solid #bca271;border-radius:16px;box-shadow:0 4px 10px #805c3933}
+main .paint-workspace .studio-actions{display:flex;gap:8px;margin-top:9px;margin-bottom:0;padding:0;background:none;border:0;box-shadow:none;flex-wrap:wrap}
+main .paint-workspace .studio-actions button{flex:1 1 145px;min-height:46px;padding:8px 11px;font-size:14px;white-space:normal}
+main .paint-workspace .note{margin-top:9px;margin-bottom:4px;background:#fff8e6de;font-size:11px;padding:8px 10px}
+main .studio-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:1050px){main .paint-layout{grid-template-columns:210px minmax(0,1fr);gap:10px} main .paint-tools .paint-palette .swatch{width:39px;height:39px;min-height:39px} main .paint-workspace .studio-actions{display:flex}}
+@media(max-width:700px){.studio-scene::before{background-position:50% center} main .paint-layout{grid-template-columns:1fr;gap:10px} main .paint-tools{max-height:unset} main .paint-tools .paint-palette{grid-template-columns:repeat(8,minmax(0,1fr));gap:4px} main .paint-tools .paint-palette .swatch{width:36px;height:36px;min-height:36px} main .paint-workspace .studio-actions button{flex:1 1 120px}}
+body.original-background main .paint-tools-panel{background:linear-gradient(135deg,#fffdf0,#fff0cf)}
+
+main .studio-scene{position:relative;isolation:isolate;padding:12px 12px 18px;border-radius:28px;overflow:hidden}
+main .paint-layout{position:relative;z-index:1;grid-template-columns:198px minmax(0,1fr);gap:10px}
+main .paint-tools-panel{padding:7px}
+main .paint-tools{padding:7px;max-height:610px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}
+main .paint-tools::-webkit-scrollbar{width:0;height:0;display:none}
+main .paint-tools h2{font-size:17px;margin:6px 0}
+main .paint-tools .paint-palette{grid-template-columns:repeat(4,minmax(0,1fr));gap:3px}
+main .paint-tools .paint-palette .swatch{width:39px;min-height:39px;height:39px}
+main .paint-brushes{gap:4px}
+main .paint-brushes button{min-height:43px}
+main .paint-canvas-shell{max-width:800px;width:100%}
+main .paint-workspace .studio-actions{max-width:800px;margin-top:8px}
+main .paint-workspace .note{max-width:800px}
+main .studio-gallery-block{position:relative;z-index:1;margin:22px 0 0;padding:20px 20px 22px;border:2px solid #d8b583;border-radius:22px;background:#fffaf0f2;box-shadow:0 3px 9px #77502d22}
+main .studio-gallery-block .section-title,main .studio-gallery-block .gallery{padding:0;margin-left:0;margin-right:0}
+main .studio-gallery-block .section-title{margin-bottom:12px}
+main .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:10px}
+main .saved-painting-card{background:#fff8df;border:2px solid #c5aa75;border-radius:16px;padding:8px;min-width:0}
+main .saved-painting-card .saved-painting{width:100%;padding:0;border:0;box-shadow:none;display:block;background:none;text-align:center;min-height:44px}
+main .saved-painting-card .saved-painting img{width:100%;height:auto;aspect-ratio:5/3;object-fit:contain;background:#fff;display:block;border:1px solid #dcc49f;border-radius:10px}
+main .saved-painting-card .saved-painting span{font-size:13px;padding:7px 4px;min-height:32px}
+main .gallery-delete{border:1px solid #c28e79;background:#fff1ea;border-radius:10px;min-height:42px;width:100%;color:#8a3e31;font-weight:700;font-size:13px}
+main .gallery-delete-confirm{margin-top:8px;padding:9px;background:#fff0e7;border-radius:12px;border:1px solid #cf9f90}
+main .gallery-delete-confirm p{margin:0 0 9px;font-size:13px;line-height:1.4;color:#633a32}
+main .gallery-delete-confirm .confirm-buttons{display:flex;gap:7px;flex-wrap:wrap}
+main .gallery-delete-confirm button{flex:1 1 90px;min-height:42px;border-radius:10px;padding:6px;border:1px solid #bb977d;background:#fff9ec;font-weight:700;font-size:12px}
+main .gallery-delete-confirm [data-paint-delete-confirm]{background:#af5146;color:white;border-color:#a44037}
+@media(max-width:1050px){main .paint-layout{grid-template-columns:188px minmax(0,1fr);gap:10px}}
+@media(max-width:700px){main .studio-scene{padding:10px}main .paint-layout{grid-template-columns:1fr}main .paint-tools{max-height:330px}main .paint-tools .paint-palette{grid-template-columns:repeat(8,minmax(0,1fr))}main .studio-gallery-block{padding:14px}main .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){main .gallery{grid-template-columns:1fr 1fr;gap:8px}}
+
+
+.studio-scene{background:url(assets/drawing_studio_room.png) center/cover no-repeat}.studio-scene .paint-studio{background:none;border:0;box-shadow:none;padding:0!important}.studio-scene canvas{max-width:800px}.studio-scene .paint-workspace{align-self:start}.studio-scene .paint-tools{max-height:610px}.studio-scene .paint-layout{display:grid}.studio-scene .paint-workspace .studio-actions{background:none;padding:0;border:0}.studio-scene .paint-workspace canvas{width:100%;height:auto}
+
+/* Reign's World: visual enhancement for GitHub Spelling Trail. No learning logic changes. */
+:root{--rw-cream:#fff7df;--rw-ink:#573522;--rw-wood:#b97a3b;--rw-outline:#a96e38;--rw-pink:#ff87ae;--rw-blue:#43b6f6;--rw-green:#6bbb36;--rw-purple:#a989eb}
+#main .rw-spell-heading{padding:13px 20px;border-color:#d6a35d;background:linear-gradient(125deg,#fff9e7f7,#ffedc9f7);box-shadow:0 4px #b67a3c,inset 0 0 0 3px #ffefd2}
+#main .rw-spell-heading h1{font-size:clamp(24px,2.6vw,34px);color:var(--rw-ink)}
+#main .rw-spell{background-image:linear-gradient(#113f3510,#145b2018),url('assets/spelling_forest_background_full.png')!important;background-repeat:no-repeat;background-size:cover;background-position:center;border:5px solid #ffefc2;border-radius:28px;box-shadow:0 6px 0 #5e8f4e,0 16px 24px #496c3b38;position:relative;padding:89px 23px 27px;isolation:isolate;grid-template-columns:minmax(0,1fr) minmax(200px,265px);gap:25px;align-items:start;overflow:hidden;min-height:620px}
+#main .rw-spell:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#174d3924,transparent 33%,transparent 70%,#0e402b24);z-index:-1;pointer-events:none}
+#main .rw-stage-brand{position:absolute;top:17px;left:22px;background:linear-gradient(#ffdd94,#efb668);color:#6b3d1f;border:3px solid #b87636;border-radius:13px;box-shadow:0 3px #7d4f2c,inset 0 1px 0 #fff2c9;font:700 clamp(22px,2.35vw,32px) Fredoka,'Trebuchet MS',sans-serif;padding:9px 22px;white-space:nowrap;transform:rotate(-1deg);text-shadow:0 1px #ffe4b0;pointer-events:none}
+#main .rw-stage-meta{position:absolute;top:22px;right:23px;max-width:41%;background:#fff7e6f0;border:2px solid #d6a565;border-radius:100px;box-shadow:0 3px #9f743d;font:700 15px Fredoka,'Trebuchet MS',sans-serif;padding:8px 17px;color:#785032;text-align:center}
+#main .rw-spell .game-panel{border:5px solid #d9a260;border-radius:47px;background:linear-gradient(130deg,#fffdf4f8,#fff1d9f8);box-shadow:0 5px #97613b,inset 0 0 0 5px #ffe8c4,0 10px 18px #234b2133;padding:27px 28px 20px;min-height:480px;color:var(--rw-ink)}
+#main .rw-spell .game-top{font-size:15px;color:#745431}
+#main .rw-spell .skill-pill{font:700 13px Fredoka,'Trebuchet MS',sans-serif;background:#f6e5bb;border:2px solid #d5aa6b;color:#815c30}
+#main .rw-spell .prompt{background:none;border:0;color:#603a25;font-size:clamp(21px,2.45vw,31px);margin:16px 0 13px;padding:0;line-height:1.25}
+#main .rw-spell .hear-bundled{background:linear-gradient(#89dbff,#1985d8);border:3px solid #e1faff;border-radius:28px;box-shadow:0 4px #2366a5,0 0 0 2px #78bde7;font:700 17px Fredoka,'Trebuchet MS',sans-serif;text-shadow:0 1px #12538b;padding:10px 22px;min-height:50px;margin-bottom:9px}
+#main .rw-spell #learning-audio-status{font-size:11px;color:#756c50;text-align:center;margin:4px auto 7px}
+#main .rw-spell .word{margin:19px auto;gap:10px}
+#main .rw-spell .word-tile{background:#fffdfa;border:3px solid #dcba87;color:#673e24;box-shadow:0 5px #bc965f;border-radius:21px;min-width:64px;min-height:73px;font-family:var(--font-display);font-weight:700}
+#main .rw-spell .word-tile.blank{background:linear-gradient(#fff4c5,#ffe493);border-color:#efc54f}
+#main .rw-spell .choices{gap:12px;margin-top:17px}
+#main .rw-spell .letter{background:linear-gradient(#f7ebff,#dac8fb);border:3px solid #af90db;border-radius:20px;box-shadow:0 4px #8d6cbe,inset 0 2px #ffffffbf;color:#52364e;font:700 30px Fredoka,'Trebuchet MS',sans-serif;min-width:64px;min-height:64px;transition:transform .15s}
+#main .rw-spell .letter:hover{transform:translateY(-2px)}
+#main .rw-spell .letter.right{background:linear-gradient(#bdf18b,#79c951);border-color:#56963b;box-shadow:0 4px #427c2a}
+#main .rw-spell .letter.wrong{background:linear-gradient(#ffe3d7,#f5b5a6);border-color:#d78b78}
+#main .rw-spell .feedback{font-size:17px;margin:22px auto 5px;min-height:35px}
+#main .rw-spell .hint{margin-top:5px;font-weight:700;color:#976329}
+#main .rw-spell .learning-keyboard button{background:linear-gradient(#fffdf4,#eedcba);border-color:#cfa878;color:#593c2f}
+/* Buddy is a separate layer BEHIND the card. The card masks the lower torso. */
+#main .rw-spell .sidebar{position:relative;isolation:isolate;padding-top:210px}
+
+#main .rw-spell .sidebar>.panel{position:relative;z-index:2;background:linear-gradient(#fff9e8fa,#fff0d4fa);border:5px solid #c99455;border-radius:31px;box-shadow:0 5px #936036,inset 0 0 0 4px #ffedc0;padding:34px 18px 17px;margin-bottom:17px;overflow:visible}
+#main .rw-spell .rw-buddy-image{position:absolute;z-index:1;top:0;left:50%;transform:translateX(-50%);width:110%;height:auto;max-height:none;object-fit:contain;pointer-events:none;filter:drop-shadow(0 4px 2px #3334)}
+#main .rw-spell .sidebar h3{background:linear-gradient(#ffdf8d,#edb75f);border:2px solid #c88d45;border-radius:19px;padding:10px 7px;color:#674126;font-size:22px;box-shadow:0 3px #a37435;position:relative;margin:0 0 13px}
+#main .rw-spell .sidebar p{font-size:14px;line-height:1.55;color:#65472d}
+#main .rw-spell .sidebar .note{background:#fff1c5;border-radius:14px;padding:10px;font-size:12px}
+#main .rw-spell .sidebar>.panel.rw-extra-progress{display:none}
+#main .rw-spell .sidebar .buddy{display:none}
+@media(max-width:1000px){#main .rw-spell{grid-template-columns:minmax(0,1fr) 205px;gap:15px;padding:76px 14px 20px}#main .rw-spell .game-panel{padding:20px 11px}#main .rw-stage-brand{font-size:22px}#main .rw-stage-meta{font-size:12px}}
+@media(max-width:700px){#main .rw-spell{display:block;padding:71px 12px 17px;min-height:0}#main .rw-stage-brand{font-size:19px;left:12px;top:16px;padding:8px 12px}#main .rw-stage-meta{font-size:11px;right:11px;top:20px;padding:8px;max-width:43%}#main .rw-spell .game-panel{padding:18px 11px;min-height:0}#main .rw-spell .sidebar{display:block;padding-top:180px;max-width:450px;margin:12px auto 0}#main .rw-spell .rw-buddy-image{width:240px;left:50%;top:0;max-height:none}}
+@media(max-width:410px){#main .rw-spell .word-tile{min-width:44px;min-height:52px;padding:4px}#main .rw-spell .letter{min-width:48px;min-height:54px;font-size:24px}#main .rw-spell .game-panel{border-radius:27px}#main .rw-stage-meta{max-width:42%}}
+
+@media (min-width:701px) and (max-width:1000px){#main .rw-spell .sidebar{padding-top:190px}#main .rw-spell .rw-buddy-image{width:116%}}
+
+#main .storybook-cover{background-image:url(assets/world-home.png)}.game-logo img{display:block;width:100%;max-width:350px;max-height:172px;object-fit:contain;margin:auto}.studio-scene .paint-studio{grid-template-columns:198px minmax(0,1fr)}@media(max-width:700px){.studio-scene .paint-studio{display:flex;flex-direction:column}.game-logo img{max-height:140px}}

@@ -1,0 +1,11 @@
+#main .storybook-cover{background-image:url('assets/dreamy-garden-friends.png');background-position:left center}
+#main .cover-tagline{paint-order:stroke fill;-webkit-text-stroke:3px white;text-shadow:0 1px 2px white,1px 0 white,-1px 0 white}
+@media(max-width:900px){
+  #main .storybook-cover{background-position:left top;background-size:100% auto;background-color:#d8edbd;min-height:0}
+  #main .cover-ui{width:100%;margin:0;padding:calc((100vw - 40px)*.563) 16px 100px}
+  #main .game-logo{margin:14px 0}
+  #main .game-logo img{max-height:140px}
+  #main .cover-menu{max-width:340px;width:100%}
+  #main .cover-progress{bottom:12px;max-width:calc(100% - 32px)}
+  #main .cover-greeting{margin-top:20px}
+}

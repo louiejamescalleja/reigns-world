@@ -1,0 +1,193 @@
+{
+  "id": "longhair",
+  "version": "hybrid-v2",
+  "canvas": [
+    340,
+    340
+  ],
+  "groundY": 296,
+  "parts": {
+    "tail": {
+      "parent": "body",
+      "rect": [
+        26,
+        139,
+        80,
+        91
+      ],
+      "pivot": [
+        65,
+        63
+      ],
+      "z": 0,
+      "texture": "tail.png",
+      "paintMask": "tail.mask.png",
+      "legacyRect": [
+        20,
+        87,
+        96,
+        130
+      ],
+      "bindOffset": [
+        -72,
+        -18
+      ]
+    },
+    "rearFar": {
+      "parent": "body",
+      "rect": [
+        111,
+        218,
+        56,
+        72
+      ],
+      "pivot": [
+        28,
+        18
+      ],
+      "z": 1,
+      "texture": "rearFar.png",
+      "paintMask": "rearFar.mask.png",
+      "legacyRect": [
+        110,
+        233,
+        47,
+        58
+      ],
+      "bindOffset": [
+        -24,
+        16
+      ]
+    },
+    "frontFar": {
+      "parent": "body",
+      "rect": [
+        208,
+        219,
+        43,
+        72
+      ],
+      "pivot": [
+        21,
+        17
+      ],
+      "z": 2,
+      "texture": "frontFar.png",
+      "paintMask": "frontFar.mask.png",
+      "legacyRect": [
+        216,
+        232,
+        39,
+        59
+      ],
+      "bindOffset": [
+        66,
+        16
+      ]
+    },
+    "rearNear": {
+      "parent": "body",
+      "rect": [
+        79,
+        222,
+        62,
+        74
+      ],
+      "pivot": [
+        31,
+        18
+      ],
+      "z": 3,
+      "texture": "rearNear.png",
+      "paintMask": "rearNear.mask.png",
+      "legacyRect": [
+        72,
+        231,
+        59,
+        65
+      ],
+      "bindOffset": [
+        -53,
+        20
+      ]
+    },
+    "frontNear": {
+      "parent": "body",
+      "rect": [
+        191,
+        223,
+        48,
+        73
+      ],
+      "pivot": [
+        24,
+        17
+      ],
+      "z": 4,
+      "texture": "frontNear.png",
+      "paintMask": "frontNear.mask.png",
+      "legacyRect": [
+        179,
+        229,
+        49,
+        67
+      ],
+      "bindOffset": [
+        52,
+        20
+      ]
+    },
+    "body": {
+      "parent": null,
+      "rect": [
+        65,
+        158,
+        186,
+        112
+      ],
+      "pivot": [
+        98,
+        62
+      ],
+      "z": 5,
+      "texture": "body.png",
+      "paintMask": "body.mask.png",
+      "legacyRect": [
+        58,
+        140,
+        184,
+        141
+      ],
+      "bindOffset": [
+        163,
+        220
+      ]
+    },
+    "head": {
+      "parent": "body",
+      "rect": [
+        134,
+        52,
+        168,
+        157
+      ],
+      "pivot": [
+        84,
+        132
+      ],
+      "z": 6,
+      "texture": "head.png",
+      "paintMask": "head.mask.png",
+      "legacyRect": [
+        123,
+        44,
+        183,
+        155
+      ],
+      "bindOffset": [
+        55,
+        -36
+      ]
+    }
+  }
+}

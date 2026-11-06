@@ -1,0 +1,219 @@
+{
+  "id": "corgi",
+  "canvas": [
+    340,
+    340
+  ],
+  "groundY": 296,
+  "carryAnchor": [
+    169,
+    205
+  ],
+  "parts": {
+    "tail": {
+      "parent": "body",
+      "rect": [
+        28,
+        150,
+        76,
+        69
+      ],
+      "pivot": [
+        55,
+        50
+      ],
+      "z": 0,
+      "scale": 1,
+      "texture": "tail.png",
+      "paintMask": "tail.mask.png",
+      "bindOffset": [
+        -79,
+        -17
+      ]
+    },
+    "rearFar": {
+      "parent": "body",
+      "rect": [
+        106,
+        242,
+        52,
+        49
+      ],
+      "pivot": [
+        26,
+        6
+      ],
+      "z": 1,
+      "scale": 1,
+      "texture": "rearFar.png",
+      "paintMask": "rearFar.mask.png",
+      "contact": [
+        29,
+        47
+      ],
+      "bindOffset": [
+        -30,
+        31
+      ]
+    },
+    "frontFar": {
+      "parent": "body",
+      "rect": [
+        211,
+        239,
+        40,
+        52
+      ],
+      "pivot": [
+        20,
+        6
+      ],
+      "z": 2,
+      "scale": 1,
+      "texture": "frontFar.png",
+      "paintMask": "frontFar.mask.png",
+      "contact": [
+        22,
+        50
+      ],
+      "bindOffset": [
+        69,
+        28
+      ]
+    },
+    "body": {
+      "parent": null,
+      "rect": [
+        57,
+        148,
+        190,
+        125
+      ],
+      "pivot": [
+        105,
+        69
+      ],
+      "z": 3,
+      "scale": 1,
+      "texture": "body.png",
+      "paintMask": "body.mask.png",
+      "bindOffset": [
+        162,
+        217
+      ]
+    },
+    "rearNear": {
+      "parent": "body",
+      "rect": [
+        70,
+        237,
+        65,
+        59
+      ],
+      "pivot": [
+        32,
+        7
+      ],
+      "z": 4,
+      "scale": 1,
+      "texture": "rearNear.png",
+      "paintMask": "rearNear.mask.png",
+      "contact": [
+        36,
+        57
+      ],
+      "bindOffset": [
+        -60,
+        27
+      ]
+    },
+    "frontNear": {
+      "parent": "body",
+      "rect": [
+        174,
+        233,
+        49,
+        63
+      ],
+      "pivot": [
+        24,
+        8
+      ],
+      "z": 5,
+      "scale": 1,
+      "texture": "frontNear.png",
+      "paintMask": "frontNear.mask.png",
+      "contact": [
+        27,
+        61
+      ],
+      "bindOffset": [
+        36,
+        24
+      ]
+    },
+    "head": {
+      "parent": "body",
+      "rect": [
+        141,
+        72,
+        137,
+        122
+      ],
+      "pivot": [
+        68,
+        88
+      ],
+      "z": 6,
+      "scale": 1,
+      "texture": "head.png",
+      "paintMask": "head.mask.png",
+      "bindOffset": [
+        47,
+        -57
+      ]
+    },
+    "earFar": {
+      "parent": "head",
+      "rect": [
+        246,
+        57,
+        58,
+        81
+      ],
+      "pivot": [
+        29,
+        66
+      ],
+      "z": 7,
+      "scale": 1,
+      "texture": "earFar.png",
+      "paintMask": "earFar.mask.png",
+      "bindOffset": [
+        66,
+        -37
+      ]
+    },
+    "earNear": {
+      "parent": "head",
+      "rect": [
+        117,
+        54,
+        62,
+        87
+      ],
+      "pivot": [
+        31,
+        71
+      ],
+      "z": 8,
+      "scale": 1,
+      "texture": "earNear.png",
+      "paintMask": "earNear.mask.png",
+      "bindOffset": [
+        -61,
+        -35
+      ]
+    }
+  }
+}

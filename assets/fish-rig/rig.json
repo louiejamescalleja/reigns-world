@@ -1,0 +1,165 @@
+{
+  "name": "Reign’s World — white fish cutout rig",
+  "reference_asset": "exploded_cute_fish_rigging_asset_sheet.png",
+  "source_resolution": [
+    1254,
+    1254
+  ],
+  "stage_resolution": [
+    1200,
+    730
+  ],
+  "render_offset": [
+    95,
+    -245
+  ],
+  "draw_order": [
+    "tail",
+    "dorsal",
+    "lower_back",
+    "lower_front",
+    "body",
+    "head",
+    "pectoral"
+  ],
+  "parts": {
+    "tail": {
+      "file": "tail.png",
+      "size": [
+        352,
+        513
+      ],
+      "stage_position_top_left": [
+        185,
+        162
+      ],
+      "pivot_in_part": [
+        383,
+        243
+      ],
+      "pivot_stage": [
+        568,
+        405
+      ]
+    },
+    "dorsal": {
+      "file": "dorsal.png",
+      "size": [
+        367,
+        271
+      ],
+      "stage_position_top_left": [
+        545,
+        113
+      ],
+      "pivot_in_part": [
+        177,
+        291
+      ],
+      "pivot_stage": [
+        722,
+        404
+      ]
+    },
+    "lower_back": {
+      "file": "lower_back.png",
+      "size": [
+        139,
+        135
+      ],
+      "stage_position_top_left": [
+        555,
+        541
+      ],
+      "pivot_in_part": [
+        158,
+        -51
+      ],
+      "pivot_stage": [
+        713,
+        490
+      ]
+    },
+    "lower_front": {
+      "file": "lower_front.png",
+      "size": [
+        124,
+        136
+      ],
+      "stage_position_top_left": [
+        781,
+        547
+      ],
+      "pivot_in_part": [
+        147,
+        -57
+      ],
+      "pivot_stage": [
+        928,
+        490
+      ]
+    },
+    "body": {
+      "file": "body.png",
+      "size": [
+        518,
+        415
+      ],
+      "stage_position_top_left": [
+        445,
+        203
+      ],
+      "pivot_in_part": [
+        274,
+        213
+      ],
+      "pivot_stage": [
+        719,
+        416
+      ]
+    },
+    "head": {
+      "file": "head.png",
+      "size": [
+        365,
+        350
+      ],
+      "stage_position_top_left": [
+        730,
+        225
+      ],
+      "pivot_in_part": [
+        156,
+        189
+      ],
+      "pivot_stage": [
+        886,
+        414
+      ]
+    },
+    "pectoral": {
+      "file": "pectoral.png",
+      "size": [
+        237,
+        223
+      ],
+      "stage_position_top_left": [
+        660,
+        413
+      ],
+      "pivot_in_part": [
+        140,
+        55
+      ],
+      "pivot_stage": [
+        800,
+        468
+      ]
+    }
+  },
+  "head_inset_pixels_from_original": 97,
+  "head_edit_note": "Original approved sprite remains byte-for-byte unchanged; moved 65 stage px inward with head pivot at joint.",
+  "side_fin_backward_pixels_from_previous": 65,
+  "revision": "Refined existing flat white fish parts; +32 px head inset, 65 px rearward fin, internal joint stroke removal and clean fill.",
+  "part_preservation": "No images generated; only existing layer positions, pixels at concealed overlaps and pivots edited."
+}
