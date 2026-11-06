@@ -1,4 +1,10 @@
 (async function(){
+  if(typeof PetSanctuary==='undefined'&&'serviceWorker' in navigator){
+    document.getElementById('main').textContent='Updating Reign’s World… Your saved progress stays here.';
+    navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});
+    try{const registration=await navigator.serviceWorker.register('sw.js',{updateViaCache:'none'});await registration.update();registration.waiting?.postMessage({type:'garden-activate-update'});}catch{document.getElementById('main').textContent='Connect to the internet and refresh to finish updating Reign’s World.';}
+    return;
+  }
   await GardenStorage.ready;
   const script=document.createElement('script');script.src=typeof GardenAudio==='undefined'?'app.js?v=2':'app.js?v=pond-lotus-v8';script.onerror=()=>{document.getElementById('main').textContent='The game could not load. Please refresh when connected.';};document.body.appendChild(script);
   const offline=document.createElement('span');offline.id='offline-status';offline.setAttribute('role','status');const updates=document.createElement('details');updates.className='game-update-notice';updates.innerHTML='<summary>Game updates</summary>';updates.appendChild(offline);const attachUpdates=()=>{const target=document.querySelector('#game-update-controls');if(target){target.appendChild(updates);return true;}return false;};if(!attachUpdates()){const observer=new MutationObserver(()=>{if(attachUpdates())observer.disconnect();});observer.observe(document.body,{childList:true,subtree:true});}
