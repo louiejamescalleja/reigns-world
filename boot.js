@@ -1,4 +1,7 @@
 (async function(){
+  const interactionStyle=document.createElement('link');interactionStyle.rel='stylesheet';interactionStyle.href='game-interaction.css';document.head.appendChild(interactionStyle);
+  const editableTarget=event=>event.target instanceof Element&&!!event.target.closest('input,textarea,[contenteditable]:not([contenteditable="false"])');
+  for(const type of ['contextmenu','selectstart','dragstart'])document.addEventListener(type,event=>{if(!editableTarget(event))event.preventDefault();});
   if(typeof PetSanctuary==='undefined'&&'serviceWorker' in navigator){
     document.getElementById('main').textContent='Updating Reign’s World… Your saved progress stays here.';
     navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});
@@ -12,7 +15,7 @@
     offline.textContent='Downloading offline words and sounds…';
     let currentRegistration,applying=false;
     navigator.serviceWorker.addEventListener('controllerchange',()=>{if(applying)location.reload();});
-    navigator.serviceWorker.addEventListener('message',event=>{if(event.data?.type==='garden-offline-ready'&&event.data.version==='github-world-fresh-start-2'&&!currentRegistration?.waiting)offline.textContent='Offline words, music and drawing tools ready ✓';});
+    navigator.serviceWorker.addEventListener('message',event=>{if(event.data?.type==='garden-offline-ready'&&event.data.version==='github-world-touch-1'&&!currentRegistration?.waiting)offline.textContent='Offline words, music and drawing tools ready ✓';});
     navigator.serviceWorker.register('sw.js').then(registration=>{
       currentRegistration=registration;
       const inspect=()=>{
